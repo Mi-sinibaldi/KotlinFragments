@@ -18,7 +18,7 @@ class FirstImageFragment : Fragment() {
 
     private fun loadImageUsingGlide() {
         progressImage.visibility = View.VISIBLE
-        GlideApp.with(activity).asBitmap()
+        Glide.with(this).asBitmap()
             .load(Uri.parse(imageUrl))
             .into(object : BitmapImageViewTarget(firstFragmentImageView) {
                 override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
